@@ -7,17 +7,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
- 					bat 'echo %PATH%'
-            }
-        }
-        stage ('Build') {
-            steps {
-                bat 'mvn install' 
-            }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml' 
-                }
+ 					sh 'echo hahaha'
             }
         }
     }
