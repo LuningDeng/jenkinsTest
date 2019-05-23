@@ -12,8 +12,7 @@ pipeline {
             }
         }
         stage ('Build') {
-            steps {
-            	bat 
+            steps { 
                 bat 'mvn -f jenkinsTestProject/pom.xml package' 
             }
         }
