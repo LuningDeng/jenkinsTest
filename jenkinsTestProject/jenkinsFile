@@ -15,6 +15,11 @@ pipeline {
             steps { 
                 bat 'mvn -f jenkinsTestProject/pom.xml package' 
             }
+            post {
+                success {
+                    junit 'target/surefire-reports/**/*.xml' 
+                }
+            }
         }
     }
 }
