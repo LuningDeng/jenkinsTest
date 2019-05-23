@@ -17,7 +17,8 @@ pipeline {
             }
             post {
                 success {
-                    junit 'jenkinsTestProject/target/surefire-reports/**/*.xml' 
+                    junit 'jenkinsTestProject/target/surefire-reports/**/*.xml'
+                    archiveArtifacts artifacts: '**/*.jar', fingerprint: true 
                 }
             }
         }
