@@ -8,7 +8,6 @@ pipeline {
         stage ('Initialize') {
             steps {
  					bat 'echo %PATH%'
- 					bat 'echo %cd%'
             }
         }
         stage ('Build') {
