@@ -4,11 +4,14 @@ pipeline {
         maven 'M3' 
         jdk 'JDK1.8' 
     }
+     parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Justin', description: 'Who is the tester?')
+    }
     stages {
         stage ('Initialize') {
             steps {
  					bat 'echo %PATH%'
- 					bat ''
+ 					bat 'echo %params.PERSON%'
             }
         }
         stage ('Build') {
