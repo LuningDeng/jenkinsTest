@@ -8,7 +8,7 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr Morna', description: 'Who is this?')
     }
     triggers{
-                    cron('H/2 * * * *')
+                    //cron('H/2 * * * *')
     }
  
     stages {
