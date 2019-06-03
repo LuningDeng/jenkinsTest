@@ -12,7 +12,7 @@ pipeline {
         stage ('Initialize') {
             steps {
  					bat 'echo %PATH%'
- 					bat 'echo %{params.PERSON}%'
+ 					echo '${params.PERSON}'
             }
         }
         stage ('Build') {
